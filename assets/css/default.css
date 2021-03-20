@@ -1,0 +1,162 @@
+.tiptap .ProseMirror{font-size: 16px;outline: none;}
+.tiptap:not(.hideable) .ProseMirror{border-bottom: solid 1px;}
+.tiptap.hideable .ProseMirror.ProseMirror-focused { border-bottom: solid 1px; }
+
+.tiptap .menububble{position:absolute;display:-webkit-box;display:-ms-flexbox;display:flex;z-index:20;background:#000;border-radius:5px;padding:.3rem;margin-bottom:.5rem;-webkit-transform:translateX(-50%);transform:translateX(-50%);visibility:hidden;opacity:0;-webkit-transition:opacity .2s,visibility .2s;transition:opacity .2s,visibility .2s}
+.tiptap .menububble.is-active{opacity:1;visibility:visible}
+.tiptap .menububble__button{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;background:transparent;border:0;color:#fff;padding:.2rem.5rem;margin-right:.2rem;border-radius:3px;cursor:pointer}
+.tiptap .menububble__button:last-child{margin-right:0}
+.tiptap .menububble__button:hover{background-color:hsla(0,0%,100%,.1)}
+.tiptap .menububble__button.is-active{background-color:hsla(0,0%,100%,.2)}
+.tiptap .menububble__form{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.tiptap .menububble__input{font:inherit;border:none;background:transparent;color:#fff}
+
+.tiptap .menubar.is-hidden {visibility: hidden;opacity: 0;}
+.tiptap .menubar.is-focused {visibility: visible;opacity: 1;-webkit-transition: visibility .2s,opacity .2s;transition: visibility .2s,opacity .2s;}
+
+.max400px { max-width: 400px;}
+.max150px { max-width: 150px;}
+
+.text--black {
+    color: #222 !important;
+}
+
+.text--grey {
+    color: #666 !important;
+}
+
+.r-dialog {
+    box-shadow: unset !important;
+    position: relative;
+    height: 90%;
+    overflow-y: unset !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.r-dialog__card {
+    overflow-y: auto !important;
+}
+.r-dialog .v-card__text {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+.r-dialog__close {
+    position: absolute;
+    top: -27px !important;
+    right: -27px !important;
+    z-index: 217;
+}
+.v-input .v-text-field__suffix {
+    display: none !important;
+}
+@media screen and (max-width: 1000px) {
+    body .v-application a {
+        color: #3C64B1;
+    }
+    .r-dialog {
+        overflow-y: auto !important;
+    }
+    .r-dialog .v-card__text {
+        max-height: unset;
+        overflow-y: auto;
+    }
+    .v-pagination .v-pagination__item {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    .v-pagination .v-pagination__navigation {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .v-input.error--text .v-text-field__suffix {
+        display: block !important;
+        font-family: "Rubik";
+        font-size: 12px;
+    }
+    .v-data-table-header>tr>th {
+        border-bottom-color: #000 !important;
+        padding-bottom: 7px !important;
+        height: unset !important;
+    }
+    .v-data-table-header th span {
+        font-family: "Rubik" !important;
+    }
+    .v-data-table__wrapper th ,
+    .v-data-table__wrapper td {
+        font-size: 12px !important;
+    }
+    .v-data-table__wrapper tr>th:first-child ,
+    .v-data-table__wrapper tr>td:first-child {
+        padding-left: 15px !important;
+    }
+    .v-data-table__wrapper tr>th:last-child ,
+    .v-data-table__wrapper tr>td:last-child {
+        padding-right: 15px !important;
+    }
+
+    .v-data-table .v-data-footer {
+        flex-wrap: nowrap;
+    }
+    .v-data-table .tcsmSelect-mobile .v-input__slot {
+        min-height: unset !important;
+        max-width: 65px;
+        padding-right: 0 !important;
+    }
+    .v-data-table .tcsmSelect-mobile .v-input__slot .v-select__selections {
+        padding: 0 !important;
+    }
+    .v-data-table .tcsmSelect-mobile .v-input__slot .v-select__selections input {
+        display: none;
+    }
+    .v-data-table .tcsmSelect-mobile .v-input__slot .v-select__selections .v-select__selection.v-select__selection--comma{
+        margin-right: 0;
+    }
+    .v-data-table .tcsmSelect-mobile .v-input__slot .v-input__append-inner {
+        margin-top: 4px;
+        padding-left: 0;
+    }
+
+    .v-text-field--filled>.v-input__control>.v-input__slot,
+    .v-text-field--full-width>.v-input__control>.v-input__slot,
+    .v-text-field--outlined>.v-input__control>.v-input__slot {
+        min-height: 43px !important;
+    }
+    .v-text-field--enclosed .v-input__append-inner,
+    .v-text-field--enclosed .v-input__append-outer,
+    .v-text-field--enclosed .v-input__prepend-inner,
+    .v-text-field--enclosed .v-input__prepend-outer,
+    .v-text-field--full-width .v-input__append-inner,
+    .v-text-field--full-width .v-input__append-outer,
+    .v-text-field--full-width .v-input__prepend-inner,
+    .v-text-field--full-width .v-input__prepend-outer {
+        margin-top: 10px !important;
+    }
+    .v-select.v-text-field--outlined:not(.v-text-field--single-line) .v-select__selections {
+        padding: 5px 0 !important;
+    }
+    .v-textarea.v-text-field--enclosed.v-text-field--outlined:not(.v-input--dense) .v-label:not(.v-label--active),
+    .v-text-field--outlined .v-label:not(.v-label--active) {
+        top: 10px;
+    }
+    .theme--light.v-data-table>.v-data-table__wrapper>table>tbody>tr:last-child>td {
+        border-bottom: thin solid rgba(0,0,0,.12);
+    }
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('~@/assets/fonts/rubik.eot'); /* IE 9 Compatibility Mode */
+    src: url('~@/assets/fonts/rubik.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('~@/assets/fonts/rubik.woff2') format('woff2'), /* Super Modern Browsers */
+    url('~@/assets/fonts/rubik.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('~@/assets/fonts/rubik.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('~@/assets/fonts/rubik.svg#rubik') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+body .v-application .font-family--rubik {
+    font-family: "Rubik" !important;
+}
+
+.hide-mobile-table-header .v-data-table-header-mobile {
+    display: none;
+}
